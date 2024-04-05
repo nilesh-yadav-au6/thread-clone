@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
   const user = useRecoilValue(userAtom);
 
   useEffect(() => {
-    const socket = io("http://localhost:8080", {
+    const socket = io("https://thread-clone-butn.onrender.com", {
       query: {
         userId: user?._id,
       },
